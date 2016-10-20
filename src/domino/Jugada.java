@@ -50,7 +50,7 @@ public class Jugada {
     }
     
     public void passar(){
-        jugador = new Jugador();
+       
     }
     
 }

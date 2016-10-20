@@ -18,6 +18,7 @@ public class Jugador {
 
     public Jugador(String nom) {
         this.nom = nom;
+        this.fitxes=new ArrayList();
     }
     
     
@@ -30,13 +31,17 @@ public class Jugador {
         return fitxes;
     }
 
-    public void setFitxes(ArrayList<Fitxa> fitxes) {
-        this.fitxes = fitxes;
-    }
     
-    private void treureFitxa(Fitxa fitxes){
+    //?
+    public void treureFitxa(Fitxa fitxes){
         
     }
+
+    @Override
+    public String toString() {
+        return "Jugador{" + "nom=" + nom + ", fitxes=" + fitxes + "}\n";
+    }
+    
 
     
     
