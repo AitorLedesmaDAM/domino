@@ -16,6 +16,12 @@ public class Jugador {
     private String nom;
     private ArrayList<Fitxa> fitxes; 
 
+    public Jugador(String nom) {
+        this.nom = nom;
+    }
+    
+    
+
     public String getNom() {
         return nom;
     }

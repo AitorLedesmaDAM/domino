@@ -14,14 +14,14 @@ import java.util.Random;
  */
 public class Domino {
 
-    private ArrayDeque<Fitxa> fitxesDeJugador;
+    private ArrayDeque<Fitxa> fitxesTaula;
     private Fitxa[] fitxesIniciales;
     private Jugador[] jugadors;
-    private int comptPassar;
+    private int passar;
     private int torn;
 
-    public ArrayDeque<Fitxa> getFitxesDeJugador() {
-        return fitxesDeJugador;
+    public ArrayDeque<Fitxa> getFitxesTaula() {
+        return fitxesTaula;
     }
 
     public Fitxa[] getFitxesIniciales() {
@@ -32,40 +32,28 @@ public class Domino {
         return jugadors;
     }
 
-    public int getComptPassar() {
-        return comptPassar;
+    public int getPassar() {
+        return passar;
     }
 
+    public void setPassar(int passar) {
+        this.passar = passar;
+    }
+    
     public int getTorn() {
         return torn;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    public void crearFitxes(){
-        fitxesIniciales = new Fitxa[28];
+
+    public void setTorn(int torn) {
+        this.torn = torn;
     }
     
     public void repartirFitxes(){
-        
-        int [] aleatoris = generaraAleatoris();
-        int pos = 0;
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 7; j++) {
-                ///jugador.[i].getFitxes().add(this.);
-                
-                
-            }
-        }
+       
         
     }
     
-    private int[] generaraAleatoris() {
+    private int[] generarAleatoris() {
         int[] aleatorio = new int[28];
         boolean[] aux = new boolean[28];
         int num;
@@ -82,6 +70,18 @@ public class Domino {
         return aleatorio;
 
     }
+    
+    public void crearJugadors(){
+        jugadors = new Jugador[4];
+        for (int i = 0; i < 14; i++) {
+            jugadors[i] = new Jugador("nom" + (i + 1));            
+        }
+    }
+    
+    
+    
+    
+    
     
     
 }
