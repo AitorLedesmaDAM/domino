@@ -5,25 +5,36 @@
  */
 package domino;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ALUMNEDAM
  */
 public class Jugador {
     
-    private int[] fitxes = new int[7];
+    private String nom;
+    private ArrayList<Fitxa> fitxes; 
 
-    public Jugador(int[] fitxes) {
-        this.fitxes = fitxes;
+    public String getNom() {
+        return nom;
     }
 
-    public int[] getFitxes() {
+    public ArrayList<Fitxa> getFitxes() {
         return fitxes;
     }
-    
-    private void passarTorn(String cadena){
-        //break;
+
+    public void setFitxes(ArrayList<Fitxa> fitxes) {
+        this.fitxes = fitxes;
     }
+    
+    private void treureFitxa(Fitxa fitxes){
+        
+    }
+
+    
+    
+    
     
     
     

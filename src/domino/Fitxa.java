@@ -14,7 +14,7 @@ public class Fitxa {
     
     private int[] valors = new int[2];
     
-    Fitxa[] fitxesInicials = new Fitxa[28];
+    Fitxa[] fitxes = new Fitxa[28];
 
     public Fitxa(int[] valors) {
         this.valors = valors;
@@ -31,9 +31,5 @@ public class Fitxa {
         valors[0] = segon;
         valors[1] = primer;
     }
-    
-    
-    
-    
-    
+        
 }
