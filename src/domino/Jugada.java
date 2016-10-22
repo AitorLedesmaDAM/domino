@@ -17,28 +17,23 @@ public class Jugada {
     private ArrayDeque<Fitxa> fitxesTaula;
 
     /**
-     * @param una array, jugador de tipu Jugador y un arreyDeque de Fitxa como
-     * fitxesTaula.
-     * @return
+     * @param jugador
+     * @param fitxesTaula que es una ArrayDeque
+     * 
      * Creamos el constructor de jugada, con arrayDeque podremos
      * modificar possicion el principio o el final de arrays.
-     * 
      */
     public Jugada(Jugador[] jugador, ArrayDeque<Fitxa> fitxesTaula) {
         this.jugador = jugador;
         this.fitxesTaula = fitxesTaula;
     }
-/**
-   * @param 
-   * @return  jugador
+/**@return  jugador
     * Este metodo es para obtener jugador.
 */
     public Jugador[] getJugador() {
         return jugador;
     }
-/**
-   * @param 
-   * @return  fitxesTaula
+/**@return  fitxesTaula
     * Este metodo es para obtener cartas de la mesa.
 */
 
@@ -46,7 +41,9 @@ public class Jugada {
         return fitxesTaula;
     }
 /**
-    *  @param una Fitxa double y su extremo, y otro Fitxa.
+    * @param doble1  de tipus Fitxa
+    * @param extremDoble1 de tipus int
+    * @param doble2 de tipus Fitxa
     * Este metodo es para double jugada, si algun jugador quiere  
     * poner 2 cartes, el jugador eligira posicion donde quiere poner  
     * cada carta y segun eso las cartas añadimos al principio o al  
@@ -63,10 +60,10 @@ public class Jugada {
         }
     }
 /**
-     * @param fitxa de tipu Fitxa y su extremo
-     * @return
-     * En este metodo añadimos la carta al principio de arrays fitxes   
-     * Taula o al final, segon como quiera el jugador.
+     * @param fitxa 
+     * @param extrem
+     * En este metodo añadimos la ficha al principio de arrays fitxesTaula   
+     * o al final, segon como quiera el jugador.
 */
     public void jugadaNormal(Fitxa fitxa, int extrem) {
         fitxesTaula = new ArrayDeque();

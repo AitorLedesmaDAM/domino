@@ -45,10 +45,11 @@ public class Fitxa {
 
     /**
      * Metodo toString para comprobar creacion de fitxes.
+     * @return Els valors de la fitxa
      */
     @Override
     public String toString() {
-        return "Fitxa{" + "valors={" + valors[0] + " , " + valors[1] + "}}";
+        return valors[0] + "|" + valors[1];
     }
 
 }

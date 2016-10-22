@@ -6,6 +6,7 @@
 package domino;
 
 import java.util.ArrayDeque;
+import java.util.Iterator;
 import java.util.Random;
 
 /**
@@ -124,7 +125,12 @@ public class Domino {
      * Este metodo es para contar los puntos que tiene cada jugador.
      */
     public void comptarPunts() {
-
+        for (int i = 0; i < 4; i++) {
+            if (jugadors[i].getFitxes().get(this.)) {
+                suma += jugadors[i].getFitxes();
+                break;
+            }
+        }
     }
 
     /**
@@ -141,45 +147,51 @@ public class Domino {
     }
 
     /**
-     * @param
-     * @return x En este metodo contamos las cartes que tiene cada jugador. Para
-     * saber quien gana por las cartes.
+     * @return x 
+     * En este metodo contamos las fichas que tiene cada jugador. 
+     * Para saber quien gana por las cartes.
      */
     public int comptarFitxes() {
 
-        int x = 0;
-        for (int i = 0; i < 5; i++) {
-            if (jugadors[i].getFitxes().size() > jugadors[i + 1].getFitxes().size()) {
-                x = i;
+        int numeroFitxes = 0;
+        int jugadorMenysFitxes = 0;
+        for (int i = 0; i < 4; i++) {
+            if (jugadors[i].getFitxes().size() > numeroFitxes) {
+                jugadorMenysFitxes = i;
+                numeroFitxes = jugadors[i].getFitxes().size();
 
             }
 
         }
-        return x;
-
+        return jugadorMenysFitxes;
     }
 
+    
     /**
+     * @param numeroJugada se recoje para saber que tipo de jugada ha realizado
+     * el jugador (jugada normal, doble o pasar)
+     * @param jugadors de tipus Jugador
      * Es para tener actualizado el estado de juego.
      */
-    private void actualitzarJoc(int numeroJugada, Jugador jugadors) {
+    private void actualitzarJoc(int numeroJugada) {
 
-        torn++;
+        
         if (numeroJugada == 3) {
             passar++;
         } else {
             passar = 0;
         }
         if (passar == 4) {
+            comptarPunts();
             comptarFitxes();
         }
 
-        if (jugadors.getFitxes().isEmpty()) {
+        if (jugadors[torn].getFitxes().isEmpty()) {
             System.out.println("el jugador" + jugadors + "ha ganado la partida!!");
-            comptarPunts();
-            System.exit(0);
+            System.exit(0);            
         } else {
-            //jugadors.(torn);
+            torn++;
+            jugadors.equals(torn);
         }
     }
 }

@@ -13,12 +13,11 @@ import java.util.ArrayList;
  */
 public class Jugador {
     
-    private String nom;
-    private ArrayList<Fitxa> fitxes; 
+    private final String nom;
+    private final ArrayList<Fitxa> fitxes; 
 
     /**
-   * @param Nom de jugador de tipu String
-   * @return  
+   * @param nom 
     * Es el constructor de Jugador, iniciamos nombre de jugador y
     * ArrayList de fitxes.
 */
@@ -28,18 +27,14 @@ public class Jugador {
     }
     
     
-/**
-   * @param 
-   * @return  nom
+/**@return  nom
     * Este metodo es para obtener nombre de jugador.
 */
     public String getNom() {
         return nom;
     }
 
-    /**
-   * @param 
-   * @return  fitxes
+    /**@return  fitxes
     * Este metodo es para obtener fitxes.
 */
     public ArrayList<Fitxa> getFitxes() {
@@ -48,21 +43,10 @@ public class Jugador {
 
     /**
    * Metodo toString para comprobar creacion de Jugadores.
+     * @return String del jugador
 */
     @Override
     public String toString() {
         return "Jugador{" + "nom=" + nom + ", fitxes=" + fitxes + "}\n";
     }
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

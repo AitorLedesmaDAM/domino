@@ -20,16 +20,23 @@ public class TestDomino {
      */
     public static void main(String[] args) {
        Domino domino=new Domino();
-       domino.crearJugadors();
        
-        for (Jugador j:domino.getJugadors()) {
-            System.out.println(j);
-        }
+       domino.crearJugadors();
         
         domino.crearFitxes();
         
+        domino.repartirFitxes();
+        
+        
+        //Mostrar todas las fichas
         for (Fitxa f: domino.getFitxesIniciales()) {
-            System.out.println(f);
+            System.out.println("Fitxa = " + f);
+        }
+        
+        
+        //Mostrar las fichas repartidas 
+        for (Jugador j:domino.getJugadors()) {
+            System.out.println(j);
         }
     }
     
