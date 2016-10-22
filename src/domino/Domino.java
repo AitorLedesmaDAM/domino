@@ -22,15 +22,18 @@ public class Domino {
     private int torn;
 
     /**
-     * @param @return fitxesTaula Metodo para obtener cartes que estan en la
-     * mesa
+     * @param 
+     * @return fitxesTaula 
+     * Metodo para obtener fichas que estan en la mesa.
      */
     public ArrayDeque<Fitxa> getFitxesTaula() {
         return fitxesTaula;
     }
 
     /**
-     * @param @return jugadors metodo para obtener jugadores
+     * @param 
+     * @return jugadors 
+     * metodo para obtener jugadores
      */
     public Jugador[] getJugadors() {
         return jugadors;
@@ -38,29 +41,34 @@ public class Domino {
 
     /**
      * @param passar que es un int
-     * @return metodo set para modificar variable passar.
+     * @return 
+     * metodo set para modificar variable passar.
      */
     public void setPassar(int passar) {
         this.passar = passar;
     }
 
     /**
-     * @param @return torn metodo get para obtener turno.
+     * @param 
+     * @return torn 
+     * metodo get para obtener turno.
      */
     public int getTorn() {
         return torn;
     }
 
     /**
-     * @param @return fitxesIniciales metodo get para obtener fitxesIniciales.
+     * @param 
+     * @return fitxesIniciales 
+     * metodo get para obtener fitxesIniciales.
      */
     public Fitxa[] getFitxesIniciales() {
         return fitxesIniciales;
     }
 
     /**
-     * Con este metodo estamos creando una arrays de fitxes que tendra 28
-     * fitxes. Con dos bucles estamos creando dos numeros para cada carta.
+     * Con este metodo estamos creando una arrays de fichas que seran 28
+     * fichas. Con dos bucles estamos creando dos numeros para cada ficha.
      */
     public void crearFitxes() {
         fitxesIniciales = new Fitxa[28];
@@ -74,8 +82,8 @@ public class Domino {
     }
 
     /**
-     * Este metodo es para repartir las cartes entre jugadores. (4 jugadores).
-     * Cada jugador tendra 7 cartas aleatorios.
+     * Este metodo es para repartir las fichas entre jugadores. (4 jugadores).
+     * Cada jugador tendra 7 fichas aleatorios.
      */
     public void repartirFitxes() {
 
@@ -90,7 +98,8 @@ public class Domino {
     }
 
     /**
-     * return aleatorio Con este metodo estamos generando cartas aleatorios,
+     * return aleatorio 
+     * Con este metodo estamos generando fichas aleatorios,
      * para poder repartir entre jugadores.
      */
     private int[] generarAleatoris() {
@@ -134,7 +143,7 @@ public class Domino {
     }
 
     /**
-     * Es este metodo comprobamos que quien tiene la carte de 6:6. Para saber
+     * Es este metodo comprobamos que quien tiene la ficha de 6:6. Para saber
      * que jugador va a empezar el juego.
      */
     public void primerTorn() {
@@ -149,7 +158,7 @@ public class Domino {
     /**
      * @return x 
      * En este metodo contamos las fichas que tiene cada jugador. 
-     * Para saber quien gana por las cartes.
+     * Para saber quien gana por las fichas.
      */
     public int comptarFitxes() {
 
