@@ -16,10 +16,10 @@ public class Jugador {
     private final String nom;
     private final ArrayList<Fitxa> fitxes; 
 
-    /**
-   * @param nom 
+/**
+    * @param nom 
     * Es el constructor de Jugador, iniciamos nombre de jugador y
-    * ArrayList de fitxes.
+    * ArrayList de fichas.
 */
     public Jugador(String nom) {
         this.nom = nom;
@@ -27,22 +27,24 @@ public class Jugador {
     }
     
     
-/**@return  nom
+/**
+    * @return  nom
     * Este metodo es para obtener nombre de jugador.
 */
     public String getNom() {
         return nom;
     }
 
-    /**@return  fitxes
-    * Este metodo es para obtener fitxes.
+/**
+    * @return  fitxes
+    * Este metodo es para obtener fichas.
 */
     public ArrayList<Fitxa> getFitxes() {
         return fitxes;
     }
 
-    /**
-   * Metodo toString para comprobar creacion de Jugadores.
+/**
+     * Metodo toString para comprobar creacion de Jugadores.
      * @return String del jugador
 */
     @Override
