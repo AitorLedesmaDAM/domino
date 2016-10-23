@@ -14,15 +14,18 @@ public class Fitxa {
     private int[] valors = new int[2];
 
     /**
-     * @param arrays de valos tipu int
-     * @return Creamos el constructor de Fitxa, con una arrays de int.
+     * @param arrays de valors tipu int
+     * @return 
+     * Creamos el constructor de Fitxa, como una array de int.
      */
     public Fitxa(int[] valors) {
         this.valors = valors;
     }
 
     /**
-     * @param @return valors Este metodo es para obtener el valor.
+     * @param
+     * @return valors 
+     * Este metodo es para obtener el valors.
      */
     public int[] getValors() {
         return valors;
@@ -32,7 +35,7 @@ public class Fitxa {
      * @param 
      * @return 
      * Este metodo estamos cambiando posicion de numeros dentro
-     * de cartas, para que en juego cada lado de cartas que sean el mismo
+     * de fichas, para que en juego cada lado de fichas que sea el mismo
      * numero.
      */
     public void cambiarOrientacio() {
@@ -44,7 +47,7 @@ public class Fitxa {
     }
 
     /**
-     * Metodo toString para comprobar creacion de fitxes.
+     * Metodo toString para comprobar creacion de fichas.
      * @return Els valors de la fitxa
      */
     @Override
